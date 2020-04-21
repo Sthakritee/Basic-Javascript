@@ -16,14 +16,7 @@ console.log(definedSimultaneosly); // i am defined will be the output because it
 doSomethingElse(); //
 function doSomethingElse(){
 console.log(' oops i did it again');
-}
-
-
-functionVar();
-var functionVar = function(){ //hoisting.js:22 Uncaught TypeError: functionVar is not a function
-    Console.log('i did it');
-
-}
+}                       // 22 Uncaught TypeError: functionVar is not a function
 
 /*to make things easier to read ,declare all your variable at the top of your function scope. 
 define the variables before to use them.
