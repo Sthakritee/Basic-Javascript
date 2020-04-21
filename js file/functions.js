@@ -32,6 +32,8 @@ function myFun(){
 Nesting function is putting function within the function. The inner function or nested function is private to it's containing outer function.
 Closure is the combination of a function bundled together, it gives  access to outer functions scope from an inner function*/
 
+console.log(addSquare(3,4));
+
 function addSquare(a,b){
     function square(x){
         return x * x;
