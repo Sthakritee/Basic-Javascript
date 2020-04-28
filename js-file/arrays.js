@@ -84,13 +84,77 @@ console.log(copy1,copy2);
 var deepArray = [["Arey bhai yeh kya hai" , 2]];
 var shallowCopy = deepArray.slice(0); //
 
-// shallowCopy[0].push("kyu chaiye humko yeh");
-// console.log(deepArray[0],shallowCopy[0]);
+shallowCopy[0].push("kyu chaiye humko yeh");
+console.log(deepArray[0],shallowCopy[0]);
 
 var deepCopy = JSON.parse(JSON.stringify(deepArray)); //JSON.parse(JSON.stringify(....)) helps to convert Java script or value to a Json string .
 
 deepCopy[0].push("kyu chaiye humko yeh"); 
 console.log(deepArray[0],deepCopy[0]); 
+
+
+/* Array Iteration */
+ //array iteration means going through the array and doing something with each item of the array.JSON
+
+
+//forEach
+let x = [8,9,12,15,16];     //
+x.forEach(function(item,index){
+    console.log(item,index)
+});
+
+//map
+const y=[1,1,19,78];
+const doubled = y.map(function(any){
+    return any*2;
+
+});
+console.log(doubled);
+
+//filter
+const ints =[1,8,9,14,56];// only puts back those item whose condition is true.
+const evens =ints.filter(function(item){
+    return item%2===0;
+});
+console.log(evens);
+
+//reduce
+const sum= [1,2,3,4,5,6,7].reduce(function(result,item){
+    return result + item;
+},0);
+console.log(sum);
+
+//some
+const hasNegativeNumbers = [1,2,1,4,-8,6].some(function(items){
+    return items <0;
+});
+console.log(hasNegativeNumbers);
+
+//every // it checks if all of the numbers are positive or not if one of the number is different from the other it returns false.
+const allPositiveNumber = [1,2,3,4,5,6,10].every(function(item){
+    return item >0;
+});
+console.log("are the numbers all positive?" + allPositiveNumber);
+
+//find
+const objects= [{id:'a'},{id:'b'},{id:'c'},{id:'d'},{id:'e'}]; // if it finds it will return but if it doesn't find then it will return undefined.
+const found =objects.find(function(item){
+    return item.id === 'b';
+
+});
+console.log(found);
+
+//find index
+const objects2 =[{id:'a'},{id:'b'},{id:'c'},{id:'d'},{id:'e'}]; //find index gives the index of the text we had been searching for.
+const foundIndex = objects2.findIndex(function(item){
+    return item.id === 'e';
+});
+console.log(foundIndex);
+
+
+
+
+
 
 
 

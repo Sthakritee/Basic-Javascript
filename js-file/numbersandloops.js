@@ -87,5 +87,12 @@ for(let x in person){
 };
 console.log(text);
 
+for(let y in arr55){
+    console.log(y)
+}
+for(let j of arr55){
+    console.log(j);
+}
+
 
 
